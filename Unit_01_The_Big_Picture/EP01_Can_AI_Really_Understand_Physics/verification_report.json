@@ -1,0 +1,139 @@
+{
+  "generated_utc": "2026-11-17T14:43:26.228360+00:00",
+  "execution": "All notebook verification cells executed in this runtime",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "matplotlib": "3.11.1"
+  },
+  "checks": {
+    "exact_initial_condition": "PASS",
+    "candidate_initial_condition": "PASS",
+    "exact_left_boundary": "PASS",
+    "exact_right_boundary": "PASS",
+    "candidate_left_boundary": "PASS",
+    "candidate_right_boundary": "PASS",
+    "sensor_positions_strictly_interior": "PASS",
+    "five_sensor_time_series_agree": "PASS",
+    "exact_reference_symmetry": "PASS",
+    "exact_reference_temperature_bounds": "PASS",
+    "midpoint_still_above_boundary_at_20s": "PASS",
+    "exact_analytical_pde_cancellation": "PASS",
+    "candidate_residual_independent_finite_differences": "PASS",
+    "candidate_residual_second_order_convergence": "PASS",
+    "exact_residual_independent_finite_differences": "PASS",
+    "exact_residual_refines_toward_zero": "PASS",
+    "candidate_nonzero_off_sensor_residual": "PASS",
+    "candidate_residual_sign_at_positive_sine": "PASS",
+    "candidate_residual_sign_at_negative_sine": "PASS",
+    "candidate_residual_zero_at_sensors": "PASS",
+    "initial_disturbance_zero_but_rate_nonzero": "PASS",
+    "export_exact_array_consistency": "PASS",
+    "export_candidate_array_consistency": "PASS",
+    "export_error_array_consistency": "PASS",
+    "export_residual_array_consistency": "PASS",
+    "export_sensor_array_consistency": "PASS",
+    "export_snapshot_array_consistency": "PASS",
+    "export_comparison_series_consistency": "PASS",
+    "seven_figure_exports_exist": "PASS"
+  },
+  "metrics": {
+    "max_sensor_difference_C": 2.4868995751603507e-14,
+    "max_field_difference_C_on_export_grid": 9.81684361111266,
+    "max_candidate_residual_C_per_s_on_export_grid": 34.9164419250331,
+    "max_exact_analytic_residual_C_per_s": 1.7763568394002505e-15,
+    "midpoint_temperature_at_20s_C": 28.334667988568015,
+    "off_sensor_at_L_over_12_t5s_difference_C": 6.321205588285577,
+    "off_sensor_at_L_over_12_t5s_residual_C_per_s": 23.195366340303107,
+    "finite_difference_candidate_errors_C_per_s": [
+      0.006444629703025839,
+      0.0016112469345159752,
+      0.00040281739284608875
+    ],
+    "finite_difference_exact_errors_C_per_s": [
+      3.3056203818659924e-05,
+      8.264063211527173e-06,
+      2.0662554334194283e-06
+    ],
+    "finite_difference_candidate_refinement_ratios": [
+      3.9997777900889107,
+      3.9999438036470574
+    ]
+  },
+  "figures": [
+    {
+      "file": "figures/01_temperature_snapshots_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Analytical temperature profiles at 0, 5, 10, and 20 seconds."
+    },
+    {
+      "file": "figures/02_exact_spacetime_field_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "The analytical field; every pixel uses the time-by-position temperature array."
+    },
+    {
+      "file": "figures/03_five_synthetic_sensors_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Five interior sensor positions and their computed reference readings at 5 seconds."
+    },
+    {
+      "file": "figures/04_reference_vs_counterexample_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Both fields agree at the five synthetic observations but differ between them at 5 seconds."
+    },
+    {
+      "file": "figures/05_signed_field_difference_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Signed difference uses ERROR_C; dotted sensor lines coincide with zero disturbance."
+    },
+    {
+      "file": "figures/06_candidate_pde_residual_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Signed residual calculated from the derived expression; zero sensor residual hides off-sensor failure."
+    },
+    {
+      "file": "figures/07_sensor_vs_off_sensor_checks_4K.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "caption": "Separate panels compare temperature differences and PDE residuals at a sensor and an off-sensor point."
+    }
+  ],
+  "data": {
+    "array_orientation": "field[time_index, position_index]",
+    "temperature_units": "degree Celsius",
+    "position_units": "m",
+    "time_units": "s",
+    "residual_units": "degree Celsius / s",
+    "synthetic_observations": true,
+    "candidate_kind": "analytically constructed counterexample; not trained",
+    "parameters": {
+      "L_m": 0.1,
+      "alpha_m2_per_s": 0.0001,
+      "baseline_C": 20.0,
+      "initial_amplitude_C": 60.0,
+      "counterexample_amplitude_C": 10.0,
+      "tau_c_s": 5.0
+    }
+  },
+  "data_sha256": "02806c72fd4a51604d87a7625e07bb23eac0a3665c0a1f8d11d4dc1193b117de"
+}

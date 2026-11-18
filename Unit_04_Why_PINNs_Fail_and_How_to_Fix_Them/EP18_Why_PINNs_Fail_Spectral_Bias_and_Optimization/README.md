@@ -1,0 +1,7 @@
+# EP18 — Why PINNs Fail: Spectral Bias & Optimization Pathologies
+
+**Status: Planned.** Lesson materials will be added after production and review.
+
+Unit 04 — Why PINNs Fail & How to Fix Them.
+
+[Unit index](../README.md) · [Full curriculum](../../CURRICULUM.md) · [Course home](../../README.md) · [Hyper Technology channel](https://www.youtube.com/@hypertechnology4273)
